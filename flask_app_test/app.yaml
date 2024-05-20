@@ -1,0 +1,7 @@
+runtime: python37
+
+env_variables:
+  CLOUD_SQL_USERNAME: root
+  CLOUD_SQL_PASSWORD: password
+  CLOUD_SQL_DATABASE_NAME: projectdb
+  CLOUD_SQL_CONNECTION_NAME: cs-411-project-419016:us-central1:project411db

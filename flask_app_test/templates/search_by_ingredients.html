@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search by Ingredients</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .header {
+            background-color: rgb(108, 145, 238);
+            height: 100px;
+            width: 100%;
+        }
+
+        .header h1 {
+            margin-top: 100;
+            text-align: center;
+            color: rgb(76, 97, 232);
+            height: 100px;
+            width: 100%;
+            line-height:2.5;
+        }
+
+        .sidebar {
+            background-color: #ebebeb;
+            position: absolute;
+            width: 200px;
+            height: 100%;
+        }
+
+    </style>
+
+</head>
+
+<div class="header">
+    <h1>
+        
+        <center>
+            <div class="inner"> 
+                PlatePal
+            </div>
+        </center>
+    </h1>
+    <center>
+        <!-- <p>[insert tagline]</p> -->
+    </center>
+
+</div>
+<body>
+    <div class="container mt-5">
+        <h2>Search Meals by Ingredients</h2>
+        <form method="GET" action="/api/search_by_ingredients">
+            <div class="form-group">
+                <input type="text" name="ingredients" class="form-control" placeholder="Enter ingredients, separated by commas">
+                <button type="submit" class="btn btn-primary mt-2">Search</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <center>
+            <div class="inner", style="color: #3163e0 ">
+                sp24-cs411-team075-GroupProject
+            </div>
+        </center>
+    </footer>  
+</body>
+</html>

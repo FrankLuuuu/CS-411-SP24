@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dietary Restrictions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Dietary Restrictions</h2>
+        <h3>Dishes without allergens:</h3>
+        <ul>
+            {% for dish in result1 %}
+                <li>{{ dish.mealName }}</li>
+            {% else %}
+                <li>No suitable dishes found.</li>
+            {% endfor %}
+        </ul>
+        <h3>Users and their possible meals:</h3>
+        <ul>
+            {% for entry in result2 %}
+                <li>{{ entry.name }} can eat {{ entry.mealName }}</li>
+            {% else %}
+                <li>No meal matches based on allergies.</li>
+            {% endfor %}
+        </ul>
+        {% if message %}
+            <div class="alert alert-info">{{ message }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>

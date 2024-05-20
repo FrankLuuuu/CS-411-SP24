@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .right-corner {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        .right-corner a {
+            display: block;  /* Each button will appear on a new line */
+            margin-bottom: 5px;  /* Adds space between buttons */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="right-corner">
+            <a href="/create_user" class="btn btn-primary">Create User</a>
+            <a href="/search_meals" class="btn btn-secondary">Search Meals</a>
+            <a href="/search_by_ingredients" class="btn btn-info">Search by Ingredients</a>
+            <a href="/delete_user" class="btn btn-danger">Delete User</a>
+            <a href="/update_allergies" class="btn btn-warning">Update Allergies</a>
+            <a href="/dietary_restrictions" class="btn btn-success">Dietary Restrictions</a> <!-- New Dietary Restrictions Button -->
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6 text-center">
+                <form method="POST" action="/fetch_pantry">
+                    <div class="form-group">
+                        <input type="text" name="user_id" class="form-control" placeholder="Enter User ID">
+                        <button type="submit" class="btn btn-default mt-2">Show Pantry</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
